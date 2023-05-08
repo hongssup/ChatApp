@@ -51,6 +51,9 @@ final class MessageViewController: UIViewController {
     }
     
     @objc private func onClickNewMessageButton() {
+        let vc = NewMessageViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 }
 
@@ -64,5 +67,13 @@ extension MessageViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         
         return cell
+    }
+}
+
+extension MessageViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ChatViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }

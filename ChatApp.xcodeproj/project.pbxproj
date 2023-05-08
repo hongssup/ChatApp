@@ -19,6 +19,9 @@
 		3625BCD92A069ECD004E897E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625BCD82A069ECD004E897E /* TabBarController.swift */; };
 		3625BCDB2A06A480004E897E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625BCDA2A06A480004E897E /* MessageViewController.swift */; };
 		3625BCDE2A06A6C2004E897E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625BCDD2A06A6C2004E897E /* Constants.swift */; };
+		3625BCE12A075EAB004E897E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3625BCE02A075EAB004E897E /* SnapKit */; };
+		3625BCE32A07650A004E897E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625BCE22A07650A004E897E /* MessageTableViewCell.swift */; };
+		3625BCE52A076714004E897E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625BCE42A076714004E897E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		3625BCD82A069ECD004E897E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3625BCDA2A06A480004E897E /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		3625BCDD2A06A6C2004E897E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3625BCE22A07650A004E897E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		3625BCE42A076714004E897E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3625BCE12A075EAB004E897E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +162,7 @@
 				3625BCA62A0699D6004E897E /* ViewController.swift */,
 				3625BCD82A069ECD004E897E /* TabBarController.swift */,
 				3625BCDA2A06A480004E897E /* MessageViewController.swift */,
+				3625BCE22A07650A004E897E /* MessageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3625BCDD2A06A6C2004E897E /* Constants.swift */,
+				3625BCE42A076714004E897E /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -184,6 +192,9 @@
 			dependencies = (
 			);
 			name = ChatApp;
+			packageProductDependencies = (
+				3625BCE02A075EAB004E897E /* SnapKit */,
+			);
 			productName = ChatApp;
 			productReference = 3625BC9F2A0699D6004E897E /* ChatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 3625BC962A0699D6004E897E;
+			packageReferences = (
+				3625BCDF2A075EAB004E897E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 3625BCA02A0699D6004E897E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,11 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3625BCE52A076714004E897E /* Extensions.swift in Sources */,
 				3625BCDB2A06A480004E897E /* MessageViewController.swift in Sources */,
 				3625BCA72A0699D6004E897E /* ViewController.swift in Sources */,
 				3625BCAD2A0699D6004E897E /* ChatApp.xcdatamodeld in Sources */,
 				3625BCA32A0699D6004E897E /* AppDelegate.swift in Sources */,
 				3625BCDE2A06A6C2004E897E /* Constants.swift in Sources */,
+				3625BCE32A07650A004E897E /* MessageTableViewCell.swift in Sources */,
 				3625BCD92A069ECD004E897E /* TabBarController.swift in Sources */,
 				3625BCA52A0699D6004E897E /* SceneDelegate.swift in Sources */,
 			);
@@ -638,6 +654,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3625BCDF2A075EAB004E897E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3625BCE02A075EAB004E897E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3625BCDF2A075EAB004E897E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3625BCAB2A0699D6004E897E /* ChatApp.xcdatamodeld */ = {

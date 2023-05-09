@@ -7,6 +7,14 @@
 
 import UIKit
 
+extension UIView {
+    convenience init(cornerRadius: CGFloat = 0, color: UIColor) {
+        self.init(frame: .zero)
+        self.layer.cornerRadius = cornerRadius
+        self.backgroundColor = color
+    }
+}
+
 extension UIImageView {
     convenience init(cornerRadius: CGFloat, image: UIImage? = nil, mode: ContentMode = .scaleAspectFit) {
         self.init()
@@ -18,11 +26,12 @@ extension UIImageView {
 }
 
 extension UILabel {
-    convenience init(text: String, font: UIFont, textColor: UIColor = .label) {
+    convenience init(text: String, font: UIFont, textColor: UIColor = .label, lines: Int = 1) {
         self.init(frame: .zero)
         self.text = text
         self.font = font
         self.textColor = textColor
+        self.numberOfLines = lines
     }
 }
 

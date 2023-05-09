@@ -46,5 +46,6 @@ enum Constants {
         static let size16 = UIFont.systemFont(ofSize: 16)
         static let size14 = UIFont.systemFont(ofSize: 14)
         static let size12 = UIFont.systemFont(ofSize: 12)
+        static let size11 = UIFont.systemFont(ofSize: 11)
     }
 }
